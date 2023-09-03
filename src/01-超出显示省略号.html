@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .ellipsis {
+        position: relative;
+        height: 40px;
+        line-height: 20px;
+        overflow: hidden;
+      }
+      .ellipsis::after {
+        content: "...";
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        padding-left: 20px;
+        background: linear-gradient(to right, transparent, #fff 50%);
+      }
+
+      .webkit {
+        border: 1px red solid;
+        -webkit-box-orient: vertical;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="ellipsis">
+      你好哦你好哦你好哦你好哦你好哦你好哦你好哦你好哦你好哦你好哦你好哦你好哦你好哦你好哦你好哦你好哦你好哦你好哦你好哦你好哦你好哦你好哦你好哦你好哦你好哦
+    </div>
+
+    <div class="webkit">
+      你好哦你好哦你好哦你好哦你好哦你好哦你好哦你好哦你好哦你好哦你好哦你好哦你好哦你好哦你好哦你好哦你好哦你好哦你好哦你好哦你好哦你好哦你好哦你好哦你好哦
+    </div>
+  </body>
+</html>
